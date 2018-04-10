@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>数组排序</title>
+</head>
+<body>
+  
+</body>
+<script>
+  var arr = [2,5,8,14,89,16];
+  console.log(arr)
+  function fn(arr){
+    for(var i = 0;i<arr.length-1;i++){
+      for(var j = 0;j < arr.length-1-i;j++){
+        if(arr[j] < arr[j+1]){
+          var temp = arr[j];
+          arr[j] = arr[j+1];
+          arr[j+1] = temp;
+        }
+      }
+    }
+    return arr;
+  }
+  console.log(fn(arr))
+</script>
+</html>
